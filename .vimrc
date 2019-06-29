@@ -47,5 +47,5 @@ filetype plugin indent on    " required
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 "
-" see :h vundle for more details or wiki for FAQ
+" see :h vundle for more details or wiki for FAQs
 " Put your non-Plugin stuff after this line

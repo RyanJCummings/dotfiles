@@ -1,5 +1,5 @@
-urxvt*transparent: true
-urxvt*shading: 20 
-#urxvt*foreground: White
-urxvt*font: xft:monospace:pixelsize=14
-#urxvt*letterSpace: -1
+URxvt*transparent: true
+URxvt*shading: 30 
+!urxvt*foreground: White
+URxvt*font: xft:monospace:pixelsize=14
+!urxvt*letterSpace: -1

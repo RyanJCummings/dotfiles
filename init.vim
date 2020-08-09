@@ -1,6 +1,6 @@
 call plug#begin("~/.vim/plugged")
 	" Plugin Section
-	Plug 'dracula/vim'
+    Plug 'AlessandroYorba/alduin'
 	Plug 'preservim/nerdtree'
 	Plug 'ryanoasis/vim-devicons'
 	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -15,12 +15,20 @@ call plug#end()
 
 "CONFIG SECTION
 
-" dracula
-if (has("termguicolors"))
- set termguicolors
+if has("termguicolors")     " set true colors
+    set t_8f=\[[38;2;%lu;%lu;%lum
+	set t_8b=\[[48;2;%lu;%lu;%lum
+	set termguicolors
 endif
+
+" dracula
+"if (has("termguicolors"))
+ "set termguicolors
+"endif
+
 syntax enable
-colorscheme dracula
+"colorscheme draculaa
+colorscheme alduin
 
 "-------------------------------------------------------------------------------
 
@@ -84,4 +92,4 @@ set tabstop=4
 set softtabstop=0 noexpandtab
 set shiftwidth=4
 set cindent
-
+hi Normal guibg=NONE ctermbg=NONE

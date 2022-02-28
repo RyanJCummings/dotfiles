@@ -1,8 +1,44 @@
 set nocompatible
+
+" Terminal Function
+let g:term_buf = 0
+let g:term_win = 0
+function! TermToggle(height)
+    if win_gotoid(g:term_win)
+        hide
+    else
+        botright new
+        exec "resize " . a:height
+        try
+            exec "buffer " . g:term_buf
+        catch
+            call termopen($SHELL, {"detach": 0})
+            let g:term_buf = bufnr("")
+            set nonumber
+            set norelativenumber
+            set signcolumn=no
+        endtry
+        startinsert!
+        let g:term_win = win_getid()
+    endif
+endfunction
+
+" Toggle terminal on/off (neovim)
+nnoremap <C-t> :call TermToggle(12)<CR>
+inoremap <C-t> <Esc>:call TermToggle(12)<CR>
+tnoremap <C-t> <C-\><C-n>:call TermToggle(12)<CR>
+
+" Terminal go back to normal mode
+tnoremap <Esc> <C-\><C-n>
+tnoremap :q! <C-\><C-n>:q!<CR>
+
+"Search Settings
 set showmatch
 set ignorecase
 set hlsearch
 set incsearch
+
+"Tab Settings
 set tabstop=4
 set softtabstop=4
 set expandtab
@@ -10,6 +46,7 @@ set shiftwidth=4
 set autoindent
 set number
 set wildmode=longest,list
+
 "set cc=80
 filetype plugin indent on
 syntax on
@@ -17,13 +54,23 @@ set mouse=a
 set clipboard=unnamedplus
 filetype plugin on
 set ttyfast
-set spell
+"set spell
 
-
+"Navigation/NERDTree settings
+"let NERDTreeMapOpenInTab='<ENTER>'
 map <C-n> :NERDTreeToggle<CR>
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+"set splitright
 
 call plug#begin("~/.vim/plugged")
  Plug 'ryanoasis/vim-devicons'
  Plug 'scrooloose/nerdtree'
  Plug 'neoclide/coc.nvim', {'branch':'release'}
+ Plug 'hashivim/vim-terraform'
+ Plug 'chr4/nginx.vim'
+ Plug 'tpope/vim-commentary'
+" Plug 'Nopik/vim-nerdtree-direnter'
  call plug#end()

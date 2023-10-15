@@ -4,7 +4,7 @@
 ## nvim Directory
 This configuration was pulled originally from ThePrimeagen.  I have heavily modified it to suit my needs but there are still
 references to the original.  He should get some credit anyway. Check out his tools such as ThePrimegen/harpoon on his github profile.
-This is currently set up for prgramming primarily in Go but more languages will likely be added.  lsp-zero makes that incredibly easy.
+This is currently set up for programming primarily in Go but more languages will likely be added.  lsp-zero makes that incredibly easy.
 
 ## Old Dotfiles
 I might switch back to i3 or dwm in the future and so I am keeping most of the other dotfiles for reference.  I might remove them eventually

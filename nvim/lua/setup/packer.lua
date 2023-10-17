@@ -13,17 +13,12 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
- use('AlexvZyl/nordic.nvim')
-     -- as = 'nordic',
-     -- config = function()
-     --     vim.cmd('colorscheme nordic')
-     --     end
-     -- }
+ -- use('AlexvZyl/nordic.nvim')
 
-  -- use {
-  --     "catppuccin/nvim",
-  --     as = "catppuccin",
-  -- }
+  use {
+      "catppuccin/nvim",
+      as = "catppuccin",
+  }
 
   use({
       "folke/trouble.nvim",
@@ -86,6 +81,11 @@ return require('packer').startup(function(use)
   use {
       'nvim-lualine/lualine.nvim',
       requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
+
+  use {
+      "windwp/nvim-autopairs",
+      config = function() require("nvim-autopairs").setup {} end
   }
 end)
 

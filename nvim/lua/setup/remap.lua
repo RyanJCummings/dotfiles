@@ -46,3 +46,6 @@ vim.keymap.set("n", "<C-t>",":sp<bar>term<cr><c-w>J:resize10<cr>")
 
 -- Remaps terminal normal mode
 vim.keymap.set("t", "<leader><ESC>", "<C-\\><c-n>")
+
+-- Remap go to end of line because '$' is hard for me to hit
+vim.keymap.set("n", "-", "<End>")

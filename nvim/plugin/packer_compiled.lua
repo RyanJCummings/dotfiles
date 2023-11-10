@@ -79,11 +79,6 @@ _G.packer_plugins = {
     path = "/home/ryan/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  catppuccin = {
-    loaded = true,
-    path = "/home/ryan/.local/share/nvim/site/pack/packer/start/catppuccin",
-    url = "https://github.com/catppuccin/nvim"
-  },
   ["cellular-automaton.nvim"] = {
     loaded = true,
     path = "/home/ryan/.local/share/nvim/site/pack/packer/start/cellular-automaton.nvim",
@@ -143,6 +138,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ryan/.local/share/nvim/site/pack/packer/start/neo-tree.nvim",
     url = "https://github.com/nvim-neo-tree/neo-tree.nvim"
+  },
+  ["nordic.nvim"] = {
+    loaded = true,
+    path = "/home/ryan/.local/share/nvim/site/pack/packer/start/nordic.nvim",
+    url = "https://github.com/AlexvZyl/nordic.nvim"
   },
   ["nui.nvim"] = {
     loaded = true,

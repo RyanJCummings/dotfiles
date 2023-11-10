@@ -13,12 +13,12 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
- -- use('AlexvZyl/nordic.nvim')
+  use('AlexvZyl/nordic.nvim')
 
-  use {
-      "catppuccin/nvim",
-      as = "catppuccin",
-  }
+  -- use {
+  --     "catppuccin/nvim",
+  --     as = "catppuccin",
+  -- }
 
   use({
       "folke/trouble.nvim",

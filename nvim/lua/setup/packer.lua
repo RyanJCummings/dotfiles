@@ -13,12 +13,22 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  use('AlexvZyl/nordic.nvim')
+  -- use('AlexvZyl/nordic.nvim')
 
-  -- use {
-  --     "catppuccin/nvim",
-  --     as = "catppuccin",
-  -- }
+  use {
+      "catppuccin/nvim",
+      as = "catppuccin",
+  }
+
+  -- use ('neanias/everforest-nvim')
+
+  -- use({
+  --     "neanias/everforest-nvim",
+  --     -- Optional; default configuration will be used if setup isn't called.
+  --     config = function()
+  --         require("everforest").setup()
+  --     end,
+  -- })
 
   use({
       "folke/trouble.nvim",
@@ -31,6 +41,7 @@ return require('packer').startup(function(use)
           }
       end
   })
+
 
   use {
       'nvim-treesitter/nvim-treesitter',

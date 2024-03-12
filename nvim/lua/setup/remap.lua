@@ -49,3 +49,6 @@ vim.keymap.set("t", "<leader><ESC>", "<C-\\><c-n>")
 
 -- Remap go to end of line because '$' is hard for me to hit
 vim.keymap.set("n", "-", "<End>")
+
+-- Map a way to quickly set the background to light colorscheme
+-- vim.keymap.set("<leader>l", vim.cmd.background=light")

@@ -13,22 +13,13 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  -- use('AlexvZyl/nordic.nvim')
-
+  -- nightfox
+  -- dayfox
+  -- terrafox
   use {
-      "catppuccin/nvim",
-      as = "catppuccin",
+      "EdenEast/nightfox.nvim",
+      as = "nightfox",
   }
-
-  -- use ('neanias/everforest-nvim')
-
-  -- use({
-  --     "neanias/everforest-nvim",
-  --     -- Optional; default configuration will be used if setup isn't called.
-  --     config = function()
-  --         require("everforest").setup()
-  --     end,
-  -- })
 
   use({
       "folke/trouble.nvim",
@@ -52,7 +43,7 @@ return require('packer').startup(function(use)
   use("nvim-treesitter/playground")
   use("mbbill/undotree")
   use("tpope/vim-fugitive")
-  use("nvim-treesitter/nvim-treesitter-context");
+  -- use("nvim-treesitter/nvim-treesitter-context");
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',
@@ -97,6 +88,8 @@ return require('packer').startup(function(use)
   use {
       "windwp/nvim-autopairs",
       config = function() require("nvim-autopairs").setup {} end
-  }
+ }
+
+  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 end)
 

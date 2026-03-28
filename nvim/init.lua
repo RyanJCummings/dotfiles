@@ -1,2 +1,3 @@
-require("setup")
-
+require("plugins")
+require("remap")
+require("set")

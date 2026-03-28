@@ -1,6 +1,0 @@
--- require("everforest").setup({
---     transparent_background  = true,
---     background = "hard",
---     ui_contrast = "high"
--- })
--- vim.cmd('colorscheme everforest')
